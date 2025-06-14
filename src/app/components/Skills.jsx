@@ -2,27 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const skillCategories = {
- Frontend: [
-  { name: "React", level: 90, icon: "⚛️" },
-  { name: "Next.js", level: 85, icon: "▲" },
-  { name: "TypeScript", level: 80, icon: "📘" },
-  { name: "Tailwind CSS", level: 95, icon: "🎨" },
- ],
- Backend: [
-  { name: "Node.js", level: 85, icon: "🟢" },
-  { name: "Python", level: 75, icon: "🐍" },
-  { name: "SQL", level: 80, icon: "🗄️" },
-  { name: "GraphQL", level: 70, icon: "🔷" },
- ],
- Tools: [
-  { name: "Git", level: 90, icon: "📦" },
-  { name: "Docker", level: 75, icon: "🐳" },
-  { name: "AWS", level: 70, icon: "☁️" },
-  { name: "CI/CD", level: 80, icon: "🔄" },
- ],
-};
+import { skillCategories } from "../data/skills";
 
 const Skills = () => {
  const [activeCategory, setActiveCategory] = useState("Frontend");
@@ -46,18 +26,18 @@ const Skills = () => {
      whileInView={{ opacity: 1, y: 0 }}
      viewport={{ once: true }}
      transition={{ duration: 0.8 }}
-     className="text-center mb-16"
+     className="text-center mb-12 sm:mb-16"
     >
-     <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 terminal-cursor">Skills</h2>
-     <div className="w-24 h-1 bg-white mx-auto" />
+     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Skills</h2>
+     <div className="w-20 sm:w-24 h-1 bg-white mx-auto" />
     </motion.div>
 
-    <div className="flex justify-center space-x-4 mb-8">
+    <div className="flex flex-wrap justify-center gap-2 mb-8">
      {Object.keys(skillCategories).map((category) => (
       <button
        key={category}
        onClick={() => setActiveCategory(category)}
-       className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap ${
         activeCategory === category ? "bg-white text-gray-900" : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50"
        }`}
       >
@@ -66,7 +46,7 @@ const Skills = () => {
      ))}
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
      {skillCategories[activeCategory].map((skill, index) => (
       <motion.div
        key={skill.name}
@@ -78,18 +58,18 @@ const Skills = () => {
       >
        <div className="flex items-center justify-between mb-2">
         <div className="flex items-center space-x-2">
-         <span className="text-xl">{skill.icon}</span>
-         <span className="font-medium text-white">{skill.name}</span>
+         <span className="text-lg sm:text-xl">{skill.icon}</span>
+         <span className="font-medium text-white text-sm sm:text-base">{skill.name}</span>
         </div>
-        <span className="text-sm text-gray-400">{skill.level}%</span>
+        <span className="text-xs sm:text-sm text-gray-400">{skill.level}%</span>
        </div>
-       <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+       <div className="w-full h-[6px] bg-gray-700 rounded-full overflow-hidden">
         <motion.div
          initial={{ width: 0 }}
          whileInView={{ width: `${skill.level}%` }}
          viewport={{ once: true }}
          transition={{ duration: 1, delay: index * 0.1 }}
-         className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+         className="h-full bg-white"
         />
        </div>
       </motion.div>

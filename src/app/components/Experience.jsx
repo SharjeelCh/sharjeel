@@ -1,27 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-const experiences = [
-  {
-    title: 'Senior Frontend Developer',
-    company: 'Tech Innovations Inc.',
-    period: '2022 - Present',
-    description: 'Leading frontend development for enterprise applications, implementing modern architectures and mentoring junior developers.',
-  },
-  {
-    title: 'Full Stack Developer',
-    company: 'Digital Solutions Ltd',
-    period: '2020 - 2022',
-    description: 'Developed and maintained multiple web applications using React, Node.js, and cloud technologies.',
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'Creative Web Agency',
-    period: '2018 - 2020',
-    description: 'Created responsive and interactive web interfaces for various clients, focusing on user experience and performance.',
-  },
-];
+import { experiences } from '../data/experiences';
 
 const Experience = () => {
   return (

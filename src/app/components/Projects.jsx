@@ -139,12 +139,12 @@ const Projects = () => {
           <div className="w-24 h-1 bg-white mx-auto mb-8" />
 
           {/* Category Buttons */}
-          <div className="flex justify-center space-x-4 mb-8 z-10">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 z-10 px-4">
             {Object.keys(projects).map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-white text-gray-900'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
@@ -160,7 +160,7 @@ const Projects = () => {
             <motion.div
               ref={horizontalScrollRef}
               style={{ x }}
-              className="flex space-x-8 px-12"
+              className="flex space-x-4 sm:space-x-8 px-4 sm:px-12"
             >
               {projects[activeCategory].map((project, index) => (
                 <motion.div
@@ -169,9 +169,9 @@ const Projects = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex-none w-[350px] group"
+                  className="flex-none w-[280px] sm:w-[350px] group"
                 >
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
                       src={project.image}
                       alt={project.title}
