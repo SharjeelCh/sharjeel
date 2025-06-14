@@ -8,8 +8,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata = {
-  title: 'Portfolio | Creative Developer',
-  description: 'A unique portfolio showcasing creative development work',
+  title: 'Sharjeel | Portfolio',
+  description: 'From the frozen north of debug hell, comes one who builds, not destroys.',
 }
 
 export default function RootLayout({ children }) {
