@@ -101,7 +101,18 @@ const Projects = () => {
   const containerRef = useRef(null);
   const stickyRef = useRef(null);
   const horizontalScrollRef = useRef(null);
-  const cardWidth = 370; // 350 card + 20 margin
+  const cardWidth = windowWidth < 640 ? 280 : 650; // Responsive card width
+  const cardGap = windowWidth < 640 ? 16 : 32; // Responsive gap between cards
+
+  // Reset scroll position when category changes
+  useEffect(() => {
+    if (containerRef.current) {
+      window.scrollTo({
+        top: containerRef.current.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }, [activeCategory]);
 
   useEffect(() => {
     // Set initial window width
@@ -117,7 +128,8 @@ const Projects = () => {
   }, []);
 
   const numCards = projects[activeCategory].length;
-  const scrollLength = windowWidth ? cardWidth * numCards - windowWidth + 80 : 0;
+  const totalContentWidth = (cardWidth + cardGap) * numCards;
+  const scrollLength = Math.max(0, totalContentWidth - windowWidth + 80);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -143,7 +155,12 @@ const Projects = () => {
             {Object.keys(projects).map((category) => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => {
+                  setActiveCategory(category);
+                  if (horizontalScrollRef.current) {
+                    horizontalScrollRef.current.style.transform = 'translateX(0px)';
+                  }
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                   activeCategory === category
                     ? 'bg-white text-gray-900'
@@ -169,7 +186,7 @@ const Projects = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex-none w-[280px] sm:w-[350px] group"
+                  className="flex-none w-[280px] sm:w-[650px] group"
                 >
                   <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
