@@ -122,7 +122,13 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-5 h-5 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full transition-all duration-300 hover:bg-white/20 hover:scale-110"
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                   e.stopPropagation();
+                   if (project.websiteLink === '/') {
+                     e.preventDefault();
+                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                   }
+                  }}
                  >
                   <svg className="w-3 h-3 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                    <path
@@ -156,7 +162,13 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-5 h-5 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full transition-all duration-300 hover:bg-white/20 hover:scale-110"
-                  onClick={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                   e.stopPropagation();
+                   if (project.websiteLink === '/') {
+                     e.preventDefault();
+                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                   }
+                  }}
                  >
                   <svg className="w-3 h-3 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                    <path
