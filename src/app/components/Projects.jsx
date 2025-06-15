@@ -218,7 +218,7 @@ const Projects = () => {
 
     <div className="fixed inset-0 flex items-center justify-center p-4">
      <Dialog.Panel className="relative w-full max-w-full aspect-video">
-      {previewImage && <Image src={previewImage} alt="Project preview" fill className="object-contain rounded-lg" priority />}
+      {previewImage && <Image src={previewImage} alt="Project preview" unoptimized fill className="object-contain rounded-lg" priority />}
       <button
        onClick={() => setPreviewImage(null)}
        className="absolute top-4 right-4 p-2 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-200"
