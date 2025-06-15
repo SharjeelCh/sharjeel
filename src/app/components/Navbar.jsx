@@ -6,7 +6,6 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaUser, FaBriefcase, FaCode, FaProjectDiagram, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const navItems = [
- { name: "Home", icon: FaUser, href: "#hero" },
  { name: "About", icon: FaUser, href: "#about" },
  { name: "Experience", icon: FaBriefcase, href: "#experience" },
  { name: "Skills", icon: FaCode, href: "#skills" },
