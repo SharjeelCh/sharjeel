@@ -77,59 +77,7 @@ const Contact = () => {
       </div>
      </motion.div>
 
-     <motion.form
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      onSubmit={handleSubmit}
-      className="space-y-4 sm:space-y-6"
-     >
-      <div className="relative">
-       <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        className="w-full px-4 py-2.5 sm:py-3 bg-gray-800/50 backdrop-blur-sm border-2 border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors duration-200 text-sm sm:text-base text-white placeholder-gray-400"
-        placeholder="Your Name"
-       />
-      </div>
 
-      <div className="relative">
-       <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-        className="w-full px-4 py-2.5 sm:py-3 bg-gray-800/50 backdrop-blur-sm border-2 border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors duration-200 text-sm sm:text-base text-white placeholder-gray-400"
-        placeholder="Your Email"
-       />
-      </div>
-
-      <div className="relative">
-       <textarea
-        name="message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-        rows="4"
-        className="w-full px-4 py-2.5 sm:py-3 bg-gray-800/50 backdrop-blur-sm border-2 border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors duration-200 resize-none text-sm sm:text-base text-white placeholder-gray-400"
-        placeholder="Your Message"
-       />
-      </div>
-
-      <motion.button
-       whileHover={{ scale: 1.02 }}
-       whileTap={{ scale: 0.98 }}
-       type="submit"
-       className="w-full px-6 sm:px-8 py-2.5 sm:py-4 bg-white text-gray-900 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-100 transition-colors duration-200"
-      >
-       Send Message
-      </motion.button>
-     </motion.form>
     </div>
    </div>
   </section>
