@@ -95,15 +95,8 @@ const Navbar = () => {
             href={item.href}
             onClick={(e) => {
               e.preventDefault();
-              // If we're at root path, add a small delay to ensure proper scrolling
-              if (window.location.pathname === '/') {
-                setTimeout(() => {
-                  const element = document.getElementById(item.href.substring(1));
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }, 100);
-              } else {
+              // Only perform scroll if we're not on root path
+              if (window.location.pathname !== '/') {
                 const element = document.getElementById(item.href.substring(1));
                 if (element) {
                   element.scrollIntoView({ behavior: 'smooth' });
@@ -180,15 +173,8 @@ const Navbar = () => {
             href={item.href}
             onClick={(e) => {
               e.preventDefault();
-              // If we're at root path, add a small delay to ensure proper scrolling
-              if (window.location.pathname === '/') {
-                setTimeout(() => {
-                  const element = document.getElementById(item.href.substring(1));
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }, 100);
-              } else {
+              // Only perform scroll if we're not on root path
+              if (window.location.pathname !== '/') {
                 const element = document.getElementById(item.href.substring(1));
                 if (element) {
                   element.scrollIntoView({ behavior: 'smooth' });
