@@ -93,7 +93,7 @@ const Projects = () => {
          onClick={() => setActiveCard(activeCard === index ? null : index)}
         >
          <div className="relative h-[140px] sm:h-[300px] rounded-2xl overflow-hidden shadow-xl">
-          <Image src={project.image} alt={project.title} fill className="object-center transition-transform duration-300 group-hover:scale-110" />
+          <Image src={project.image} alt={project.title} unoptimized fill className="object-center transition-transform duration-300 group-hover:scale-110" />
           <div
            className={`absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent transition-opacity duration-300 ${
             activeCard === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"

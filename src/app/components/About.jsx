@@ -30,6 +30,7 @@ const About = () => {
        src="/Profile/profile1.png"
        alt="Profile"
        fill
+       unoptimized
        className="object-contain"
        priority
       />
