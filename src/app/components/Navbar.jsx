@@ -24,6 +24,13 @@ const Navbar = () => {
   restDelta: 0.001,
  });
 
+ // Add # to root URL if not present
+ useEffect(() => {
+  if (window.location.pathname === '/' && !window.location.hash) {
+    window.history.replaceState(null, '', '/#');
+  }
+ }, []);
+
  // Close mobile menu when clicking outside
  useEffect(() => {
   const handleClickOutside = (event) => {
