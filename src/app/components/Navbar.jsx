@@ -6,11 +6,11 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaUser, FaBriefcase, FaCode, FaProjectDiagram, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const navItems = [
- { name: "About", icon: FaUser, href: "#about" },
- { name: "Experience", icon: FaBriefcase, href: "#experience" },
- { name: "Skills", icon: FaCode, href: "#skills" },
- { name: "Projects", icon: FaProjectDiagram, href: "#projects" },
- { name: "Contact", icon: FaEnvelope, href: "#contact" },
+ { name: "About", icon: FaUser, href: "/#about" },
+ { name: "Experience", icon: FaBriefcase, href: "/#experience" },
+ { name: "Skills", icon: FaCode, href: "/#skills" },
+ { name: "Projects", icon: FaProjectDiagram, href: "/#projects" },
+ { name: "Contact", icon: FaEnvelope, href: "/#contact" },
 ];
 
 const Navbar = () => {
