@@ -25,7 +25,7 @@ const Hero = () => {
  }, []);
 
  return (
-  <section className="relative min-h-screen flex items-center justify-center">
+  <section id="hero" className="relative min-h-screen flex items-center justify-center">
    {/* Main content */}
    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">

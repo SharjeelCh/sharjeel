@@ -6,6 +6,7 @@ import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { FaUser, FaBriefcase, FaCode, FaProjectDiagram, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const navItems = [
+ { name: "Home", icon: FaUser, href: "#hero" },
  { name: "About", icon: FaUser, href: "#about" },
  { name: "Experience", icon: FaBriefcase, href: "#experience" },
  { name: "Skills", icon: FaCode, href: "#skills" },
@@ -23,13 +24,6 @@ const Navbar = () => {
   damping: 30,
   restDelta: 0.001,
  });
-
- // Add # to root URL if not present
- useEffect(() => {
-  if (window.location.pathname === '/' && !window.location.hash) {
-    window.history.replaceState(null, '', '/#');
-  }
- }, []);
 
  // Close mobile menu when clicking outside
  useEffect(() => {
@@ -101,15 +95,12 @@ const Navbar = () => {
            <Link
             href={item.href}
             onClick={(e) => {
-              e.preventDefault();
-              // Only perform scroll if we're not on root path
-              if (window.location.pathname !== '/') {
-                const element = document.getElementById(item.href.substring(1));
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }
-              handleLinkClick();
+             e.preventDefault();
+             const element = document.getElementById(item.href.substring(1));
+             if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+             }
+             handleLinkClick();
             }}
             className={`group relative flex items-center px-4 py-2 rounded-full transition-all duration-200 ${
              isActive ? "bg-white/10 backdrop-blur-md text-white" : "text-gray-300 hover:text-white"
@@ -179,15 +170,12 @@ const Navbar = () => {
            <Link
             href={item.href}
             onClick={(e) => {
-              e.preventDefault();
-              // Only perform scroll if we're not on root path
-              if (window.location.pathname !== '/') {
-                const element = document.getElementById(item.href.substring(1));
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }
-              handleLinkClick();
+             e.preventDefault();
+             const element = document.getElementById(item.href.substring(1));
+             if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+             }
+             handleLinkClick();
             }}
             className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 ${
              isActive ? "bg-white/10 text-white" : "text-gray-300 hover:text-white"
