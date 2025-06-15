@@ -93,6 +93,14 @@ const Navbar = () => {
           <motion.div key={item.name} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + index * 0.1 }}>
            <Link
             href={item.href}
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById(item.href.substring(1));
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                handleLinkClick();
+              }
+            }}
             className={`group relative flex items-center px-4 py-2 rounded-full transition-all duration-200 ${
              isActive ? "bg-white/10 backdrop-blur-md text-white" : "text-gray-300 hover:text-white"
             }`}
@@ -160,7 +168,14 @@ const Navbar = () => {
           <motion.div key={item.name} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }}>
            <Link
             href={item.href}
-            onClick={handleLinkClick}
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById(item.href.substring(1));
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                handleLinkClick();
+              }
+            }}
             className={`flex items-center px-4 py-3 rounded-lg transition-all duration-200 ${
              isActive ? "bg-white/10 text-white" : "text-gray-300 hover:text-white"
             }`}
