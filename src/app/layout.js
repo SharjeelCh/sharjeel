@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import GridBackground from "./components/GridBackground";
+import Loader from "../components/Loader.js";
 
 const jetbrainsMono = JetBrains_Mono({
  subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
    </head>
    <body className={`${jetbrainsMono.className} text-white antialiased`}>
     <GridBackground />
+    <Loader />
     <main className="relative">{children}</main>
    </body>
   </html>

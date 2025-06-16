@@ -1,0 +1,111 @@
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+}
+
+.loader-container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  animation: racket 1s ease-in-out infinite;
+  transform: scale(0.5);
+  box-shadow: 0px 0px 100px rgba(0,0,0,.5);
+}
+
+.loader-ball:nth-child(1) {
+  background: #333333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.loader-ball:nth-child(1)::after {
+  content: '';
+  width: 13px;
+  height: 21px;
+  background: lightgreen;
+  position: absolute;
+  top: -15px;
+  transform: rotate(144deg);
+  transform-origin: center center;
+}
+
+.loader-ball:nth-child(3) {
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation-delay: 500ms;
+}
+
+.loader-ball:nth-child(2) {
+  background: #333333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation-delay: 500ms;
+}
+
+.loader-ball:nth-child(2)::after {
+  content: '';
+  width: 13px;
+  height: 21px;
+  background: lightgreen;
+  position: absolute;
+  top: -15px;
+  transform: rotate(144deg);
+  transform-origin: center center;
+}
+
+.loader-ball:nth-child(4) {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation-delay: 0s;
+  box-shadow: inset 0px 10px 10px rgba(0,0,0,.5), 0px 10px 10px rgba(0,0,0,.5);
+}
+
+@keyframes racket {
+  0% {
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    transform: scale(0.5);
+  }
+  50% {
+    box-shadow: 0px 20px 20px rgba(0,0,0,.2);
+    transform: translateX(50px) scale(1.2);
+  }
+  100% {
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    transform: scale(0.5);
+  }
+} 
