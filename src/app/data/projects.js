@@ -133,7 +133,7 @@ export const projects = {
     title: "Nasa Explorer",
     description: "Space exploration app with NASA data and image galleries.",
     image: "/Mobile/9.png",
-    githubLink: "https://github.com/SharjeelCh/Nasa-Explorer",
+    githubLink: "https://github.com/SharjeelCh/cosmos",
     showBothLinks: false,
     techStack: ["RN Expo", "NASA APIs", "Material UI Theme"],
    },
