@@ -44,25 +44,40 @@ const Navbar = () => {
  useEffect(() => {
   const handleScroll = () => {
    setIsScrolled(window.scrollY > 50);
-
-   // Update active section based on scroll position
-   const sections = navItems.map((item) => item.href.substring(1));
-   const currentSection = sections.find((section) => {
-    const element = document.getElementById(section);
-    if (element) {
-     const rect = element.getBoundingClientRect();
-     return rect.top <= 100 && rect.bottom >= 100;
-    }
-    return false;
-   });
-
-   if (currentSection) {
-    setActiveSection(currentSection);
-   }
   };
 
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
+ }, []);
+
+ // Intersection Observer for section detection
+ useEffect(() => {
+  const observerOptions = {
+   root: null,
+   rootMargin: "-50% 0px",
+   threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+   entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+     setActiveSection(entry.target.id);
+    }
+   });
+  }, observerOptions);
+
+  // Observe all sections
+  navItems.forEach((item) => {
+   const section = document.getElementById(item.href.substring(1));
+   if (section) {
+    observer.observe(section);
+   }
+  });
+
+  return () => {
+   // Cleanup: disconnect observer
+   observer.disconnect();
+  };
  }, []);
 
  return (
