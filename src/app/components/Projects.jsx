@@ -87,7 +87,7 @@ const Projects = () => {
       <motion.div ref={horizontalScrollRef} style={{ x }} className="flex space-x-4 sm:space-x-8 px-4 sm:px-12 will-change-transform">
        {projects[activeCategory].map((project, index) => (
         <motion.div
-         key={index}
+         key={project.image}
          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
          className="flex-none w-[410px] sm:w-[800px] group"
          onClick={() => setActiveCard(activeCard === index ? null : index)}
