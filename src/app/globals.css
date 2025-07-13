@@ -149,4 +149,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   .lg\:font-6xl { font-size: 3.75rem !important; }
 }
 
+html, body, :root {
+  font-size: 16px !important;
+}
+body * {
+  font-size: inherit;
+}
+
 
