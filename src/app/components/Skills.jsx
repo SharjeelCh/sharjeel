@@ -28,7 +28,7 @@ const Skills = () => {
      transition={{ duration: 0.8 }}
      className="text-center mb-12 sm:mb-16"
     >
-     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Skills</h2>
+     <h2 className="font-2xl sm:font-3xl md:font-4xl font-bold text-white mb-4">Skills</h2>
      <div className="w-20 sm:w-24 h-1 bg-white mx-auto" />
     </motion.div>
 
@@ -58,10 +58,10 @@ const Skills = () => {
       >
        <div className="flex items-center justify-between mb-2">
         <div className="flex items-center space-x-2">
-         <span className="text-lg sm:text-xl">{skill.icon}</span>
-         <span className="font-medium text-white text-sm sm:text-base">{skill.name}</span>
+         <span className="font-lg sm:font-xl">{skill.icon}</span>
+         <span className="font-medium text-white font-sm sm:font-base">{skill.name}</span>
         </div>
-        <span className="text-xs sm:text-sm text-gray-400">{skill.level}%</span>
+        <span className="font-xs sm:font-sm text-gray-400">{skill.level}%</span>
        </div>
        <div className="w-full h-[6px] bg-gray-700 rounded-full overflow-hidden">
         <motion.div

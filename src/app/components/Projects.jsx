@@ -61,7 +61,7 @@ const Projects = ({ projects: projectsProp }) => {
     <section ref={containerRef} style={{ height: `${numCards * 100}vh` }} className="relative" id="projects">
       <div ref={stickyRef} className="sticky top-0 h-screen overflow-hidden">
         <div className="flex flex-col items-center justify-center h-full">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Projects</h2>
+          <h2 className="font-3xl sm:font-4xl font-bold text-white mb-4">Projects</h2>
           <div className="w-24 h-1 bg-white mx-auto mb-8" />
 
           {/* Category Buttons (hide if filtered) */}
@@ -113,11 +113,11 @@ const Projects = ({ projects: projectsProp }) => {
                    }`}
                   >
                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                    <h3 className="text-sm sm:text-xl font-bold text-white mb-1 sm:mb-2">{project.title}</h3>
-                    <p className="text-[12px] sm:text-base text-gray-200 mb-2 sm:mb-2">{project.description}</p>
+                    <h3 className="font-sm sm:font-xl font-bold text-white mb-1 sm:mb-2">{project.title}</h3>
+                    <p className="font-12px sm:font-base text-gray-200 mb-2 sm:mb-2">{project.description}</p>
                     <div className="flex flex-wrap gap-1 mt-1 mb-2">
                      {project.techStack?.map((tech, index) => (
-                      <span key={index} className="px-1.5 py-0.5 text-[8px] sm:text-xs bg-white/10 backdrop-blur-sm rounded-full text-white whitespace-nowrap">
+                      <span key={index} className="px-1.5 py-0.5 font-8px sm:font-xs bg-white/10 backdrop-blur-sm rounded-full text-white whitespace-nowrap">
                        {tech}
                       </span>
                      ))}

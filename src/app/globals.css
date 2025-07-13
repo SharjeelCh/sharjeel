@@ -113,4 +113,40 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   will-change: transform, opacity;
 }
 
+/* Custom font size classes to replace Tailwind font size utilities */
+
+.font-xs { font-size: 0.75rem; }
+.font-sm { font-size: 0.875rem; }
+.font-base { font-size: 1rem; }
+.font-lg { font-size: 1.125rem; }
+.font-xl { font-size: 1.25rem; }
+.font-2xl { font-size: 1.5rem; }
+.font-3xl { font-size: 1.875rem; }
+.font-4xl { font-size: 2.25rem; }
+.font-5xl { font-size: 3rem; }
+.font-6xl { font-size: 3.75rem; }
+.font-8px { font-size: 8px; }
+.font-12px { font-size: 12px; }
+
+/* Responsive font sizes */
+@media (min-width: 640px) {
+  .sm\:font-lg { font-size: 1.125rem; }
+  .sm\:font-xl { font-size: 1.25rem; }
+  .sm\:font-2xl { font-size: 1.5rem; }
+  .sm\:font-3xl { font-size: 1.875rem; }
+  .sm\:font-4xl { font-size: 2.25rem; }
+  .sm\:font-5xl { font-size: 3rem; }
+  .sm\:font-6xl { font-size: 3.75rem; }
+  .sm\:font-xs { font-size: 0.75rem; }
+  .sm\:font-sm { font-size: 0.875rem; }
+  .sm\:font-base { font-size: 1rem; }
+}
+@media (min-width: 768px) {
+  .md\:font-5xl { font-size: 3rem; }
+  .md\:font-6xl { font-size: 3.75rem; }
+}
+@media (min-width: 1024px) {
+  .lg\:font-6xl { font-size: 3.75rem; }
+}
+
 

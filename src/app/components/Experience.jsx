@@ -14,7 +14,7 @@ const Experience = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="font-3xl sm:font-4xl font-bold text-white mb-4">
             Experience
           </h2>
           <div className="w-24 h-1 bg-white mx-auto" />
@@ -41,13 +41,13 @@ const Experience = () => {
 
                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <div className="p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3 className="font-xl font-bold text-white mb-2">
                       {exp.title}
                     </h3>
                     <p className="text-gray-300 font-medium mb-2">
                       {exp.company}
                     </p>
-                    <p className="text-sm text-gray-400 mb-4">
+                    <p className="font-sm text-gray-400 mb-4">
                       {exp.period}
                     </p>
                     <p className="text-gray-300">

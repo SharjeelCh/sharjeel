@@ -94,7 +94,7 @@ const Navbar = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div className="flex items-center justify-between">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="flex-shrink-0">
-       <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"></Link>
+       <Link href="/" className="font-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"></Link>
       </motion.div>
 
       {/* Desktop Navigation */}
@@ -121,7 +121,7 @@ const Navbar = () => {
             }`}
            >
             <Icon className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">{item.name}</span>
+            <span className="font-sm font-medium">{item.name}</span>
 
             {isActive && (
              <motion.div
@@ -196,7 +196,7 @@ const Navbar = () => {
             }`}
            >
             <Icon className="w-5 h-5 mr-3" />
-            <span className="text-sm font-medium">{item.name}</span>
+            <span className="font-sm font-medium">{item.name}</span>
            </Link>
           </motion.div>
          );
