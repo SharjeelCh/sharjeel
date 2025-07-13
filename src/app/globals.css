@@ -115,38 +115,38 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /* Custom font size classes to replace Tailwind font size utilities */
 
-.font-xs { font-size: 0.75rem; }
-.font-sm { font-size: 0.875rem; }
-.font-base { font-size: 1rem; }
-.font-lg { font-size: 1.125rem; }
-.font-xl { font-size: 1.25rem; }
-.font-2xl { font-size: 1.5rem; }
-.font-3xl { font-size: 1.875rem; }
-.font-4xl { font-size: 2.25rem; }
-.font-5xl { font-size: 3rem; }
-.font-6xl { font-size: 3.75rem; }
-.font-8px { font-size: 8px; }
-.font-12px { font-size: 12px; }
+.font-xs { font-size: 0.75rem !important; }
+.font-sm { font-size: 0.875rem !important; }
+.font-base { font-size: 1rem !important; }
+.font-lg { font-size: 1.125rem !important; }
+.font-xl { font-size: 1.25rem !important; }
+.font-2xl { font-size: 1.5rem !important; }
+.font-3xl { font-size: 1.875rem !important; }
+.font-4xl { font-size: 2.25rem !important; }
+.font-5xl { font-size: 3rem !important; }
+.font-6xl { font-size: 3.75rem !important; }
+.font-8px { font-size: 8px !important; }
+.font-12px { font-size: 12px !important; }
 
 /* Responsive font sizes */
 @media (min-width: 640px) {
-  .sm\:font-lg { font-size: 1.125rem; }
-  .sm\:font-xl { font-size: 1.25rem; }
-  .sm\:font-2xl { font-size: 1.5rem; }
-  .sm\:font-3xl { font-size: 1.875rem; }
-  .sm\:font-4xl { font-size: 2.25rem; }
-  .sm\:font-5xl { font-size: 3rem; }
-  .sm\:font-6xl { font-size: 3.75rem; }
-  .sm\:font-xs { font-size: 0.75rem; }
-  .sm\:font-sm { font-size: 0.875rem; }
-  .sm\:font-base { font-size: 1rem; }
+  .sm\:font-lg { font-size: 1.125rem !important; }
+  .sm\:font-xl { font-size: 1.25rem !important; }
+  .sm\:font-2xl { font-size: 1.5rem !important; }
+  .sm\:font-3xl { font-size: 1.875rem !important; }
+  .sm\:font-4xl { font-size: 2.25rem !important; }
+  .sm\:font-5xl { font-size: 3rem !important; }
+  .sm\:font-6xl { font-size: 3.75rem !important; }
+  .sm\:font-xs { font-size: 0.75rem !important; }
+  .sm\:font-sm { font-size: 0.875rem !important; }
+  .sm\:font-base { font-size: 1rem !important; }
 }
 @media (min-width: 768px) {
-  .md\:font-5xl { font-size: 3rem; }
-  .md\:font-6xl { font-size: 3.75rem; }
+  .md\:font-5xl { font-size: 3rem !important; }
+  .md\:font-6xl { font-size: 3.75rem !important; }
 }
 @media (min-width: 1024px) {
-  .lg\:font-6xl { font-size: 3.75rem; }
+  .lg\:font-6xl { font-size: 3.75rem !important; }
 }
 
 

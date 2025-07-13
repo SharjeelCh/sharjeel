@@ -58,4 +58,4 @@ export async function generateStaticParams() {
     { category: 'mobile-projects' },
     { category: 'desktop-projects' },
   ];
-} 
+}
