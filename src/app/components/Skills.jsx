@@ -28,7 +28,7 @@ const Skills = () => {
      transition={{ duration: 0.8 }}
      className="text-center mb-12 sm:mb-16"
     >
-     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Skills</h2>
+     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">Skills</h2>
      <div className="w-20 sm:w-24 h-1 bg-white mx-auto" />
     </motion.div>
 
@@ -37,7 +37,7 @@ const Skills = () => {
       <button
        key={category}
        onClick={() => setActiveCategory(category)}
-       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
+       className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
         activeCategory === category ? "bg-white text-gray-900" : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50"
        }`}
       >
@@ -58,10 +58,10 @@ const Skills = () => {
       >
        <div className="flex items-center justify-between mb-2">
         <div className="flex items-center space-x-2">
-         <span className="text-lg sm:text-xl">{skill.icon}</span>
-         <span className="font-medium text-white text-sm sm:text-base">{skill.name}</span>
+         <span className="text-md sm:text-lg">{skill.icon}</span>
+         <span className="font-medium text-white text-xs sm:text-sm">{skill.name}</span>
         </div>
-        <span className="text-xs sm:text-sm text-gray-400">{skill.level}%</span>
+        <span className="text-xs sm:text-xs text-gray-400">{skill.level}%</span>
        </div>
        <div className="w-full h-[6px] bg-gray-700 rounded-full overflow-hidden">
         <motion.div
