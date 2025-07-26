@@ -196,7 +196,7 @@ const Navbar = () => {
             }`}
            >
             <Icon className="w-5 h-5 mr-3" />
-            <span className="text-sm font-medium">{item.name}</span>
+            <span className="text-xs font-medium">{item.name}</span>
            </Link>
           </motion.div>
          );

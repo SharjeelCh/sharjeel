@@ -32,9 +32,9 @@ const Hero = () => {
      {/* Left column - Text content */}
      <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="text-left space-y-6 sm:space-y-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="space-y-3 sm:space-y-4">
-       <h2 className="text-base sm:text-lg font-medium text-blue-400 code-block inline-block">Hello, I'm</h2>
-       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">Sharjeel Fida Ch</h1>
-       <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-lg code-block">
+       <h2 className="text-sm sm:text-base font-medium text-blue-400 code-block inline-block">Hello, I'm</h2>
+       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">Sharjeel Fida Ch</h1>
+       <p className="text-sm sm:text-md md:text-lg text-gray-300 max-w-lg code-block">
         Full-stack web & app developer crafting intelligent digital solutions through code, design, and AI fine-tuning
        </p>
       </motion.div>
@@ -69,7 +69,7 @@ const Hero = () => {
         href="#projects"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-black rounded-lg text-sm sm:text-base font-medium transition-colors duration-200 text-center"
+        className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-black rounded-lg text-xs sm:text-sm font-medium transition-colors duration-200 text-center"
        >
         View Projects
        </motion.a>
@@ -78,7 +78,7 @@ const Hero = () => {
         download="Sharjeel_Fida_Resume.pdf"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="px-6 sm:px-8 py-2.5 sm:py-3 border border-gray-600 text-white rounded-lg text-sm sm:text-base font-medium hover:border-gray-400 transition-colors duration-200 text-center"
+        className="px-6 sm:px-8 py-2.5 sm:py-3 border border-gray-600 text-white rounded-lg text-xs sm:text-sm font-medium hover:border-gray-400 transition-colors duration-200 text-center"
        >
         Resume
        </motion.a>
