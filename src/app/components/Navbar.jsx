@@ -121,7 +121,7 @@ const Navbar = () => {
             }`}
            >
             <Icon className="w-5 h-5 mr-2" />
-            <span className="text-sm font-medium">{item.name}</span>
+            <span className="font-medium" style={{fontSize:'12px'}}>{item.name}</span>
 
             {isActive && (
              <motion.div
